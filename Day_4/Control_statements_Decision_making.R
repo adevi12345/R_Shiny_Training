@@ -54,10 +54,16 @@ x <- letters[4:10]
 
 for(i in x){ 
   print(i) 
-  print(paste(i,"hello"))
+  if(i == "e"){
+    print(paste(i,"hello"))
+  }else{
+    print("hi")
+  }
 }
 
-
+for (variable in vector) {
+  
+}
 #nested loops
 # Defining matrix 
 m <- matrix(2:15, 2) 
@@ -105,6 +111,72 @@ repeat{
 }
 #return(expression)
 
+x <- "Intellipaat"
+
+if(is.character(x)) {  
+  print("X is a Character")
+}
+
+x <- c("Intellipaat","R","Tutorial")
+
+if("Intellipaat" %in% x) {  
+  print("Intellipaat")
+} else {  
+  print("Not found")
+}
+
+#multiplication table
+
+table<-function(x,y){  #argument
+  for(i in 1:10){
+  mul=x*i
+  print(paste(x, '*', i,'=',mul))
+}               
+}
+
+
+table(10) # 8 is a parameter
+
+x <- c("Intellipaat","R","Tutorial")
+
+if("Intellipat" %in% x) {  #false
+  print("Intellipaat")
+} else if ("Tutoial" %in% x) {
+  print("Tutorial")
+} else {  
+  print("Not found")
+  }
+#switch
+#The switch statement is one of the control statements in R programming which is used to equate a variable against a set of values. Each value is called a case.
+
+x <- switch(  
+  3,  
+  "Intellipaat",  
+  "R",  
+  "Tutorial",  
+  "Beginners"
+)
+print(x)
+
+v <- c(0:6)
+
+for (i in v) {  # a<-4
+  if(i == 3){
+    break
+  }
+  print(i)
+}
+
+
+v <- c(0:6)
+for (i in v) {
+  if(i == 3){
+    next
+  }
+  print(i)
+}
+
+
 # Checks value is either positive, negative or zero 
 func <- function(x){ 
   if(x > 0){ 
@@ -116,6 +188,8 @@ func <- function(x){
     return("Zero") 
   } 
 } 
+
+
 
 func(1) 
 func(0) 
@@ -135,7 +209,7 @@ for(i in x){
 
 
 #excercises
-#local variable definition  
+ 
 a<- 100  
 #checking boolean condition  
 if(a<20){  
@@ -283,3 +357,40 @@ for (i  in fruit)
 {   
   print(i)  
 } 
+
+
+
+
+
+
+#Create a numeric vector
+# print those values from a function
+# to know the data type of each variable
+
+x_dinesh=c(1,8,3,4,5)
+
+dinesh_fun<-function(a){
+  print(a)
+}
+  
+dinesh_fun(x_venkat)
+
+class(x_venkat)
+
+# 
+is.numeric(x_dinesh)
+
+x_venkat<-(1:10)
+
+
+&&
+  
+  return()
+
+
+
+#create a funtion which takes a value from the user and check it is a even or odd
+
+
+
+
