@@ -1,11 +1,10 @@
-
 # What are Data Structures in R Programming?
-# Vectors
-# Lists
-# Matrices
-# Factors
-# Data Frames
-# Arrays
+# Vectors  #homogenoes # same dataype 1d 
+# Lists #hetrogeneous #diffrentdataytpe 1d
+# Matrices # homo 2d
+# Factors #
+# Data Frames  # hetro
+# Arrays #mul
 
 #The typeof() function is used to check the data type of the vector, and the class() function is used to check the class of the vector.
 
@@ -118,15 +117,42 @@ sort(fruits)  # Sort a string
 
 sort(numbers,decreasing = TRUE) # Sort numbers
 
-fruits <- c("banana", "apple", "orange", "mango", "lemon")
+fruits <- c("banana", "apple", "orange", "apple_m", "lemon")
+
+num_vect<-c(1:10)
+
+mul_list<-list(fruits,num_vect)
+
+fruits[-1]
+
+fruits[1]
+
+fruits["apple"] #error
+
+fruits[fruits %in% c('apple')] 
+
+add_vector<-c(fruits,numbers)
+  
+add_vector
+
+add_vector_1<-c(fruits,numbers[2])
 
 # Access the first and third item (banana and orange)
 fruits[c(1, 3)]
 # Access all items except for the first item
 fruits[c(-1,-3)]
+
 fruits[1:4]
+#acccess are done
+
 # Change "banana" to "pear"
-fruits[1] <- "pear"
+
+fruits[3] <- "pear"
+
+fruits
+
+fruits[3]<-numbers[4]
+
 # Create Named Vector
 x <- c(C1='A',C2='B',C3='C')
 print(x)
@@ -138,9 +164,14 @@ print(typeof(v))
 print(is.vector(v))
 print(is.list(li))
 
+example_list<-list(fruits_names= fruits,num_vect=num_vect)
+example_list
+
+unlisf_value<-unlist(example_list)
+
 # Create Numeric Vector with 0 to 10 Values
 v <- 1:10
-v <- seq(1, 10)
+v <- seq(1,10)
 print(v)
 
 # Create Vector of Specified length
@@ -148,6 +179,8 @@ v <- character(5)
 print(v)
 
 v<-c()
+
+
 
 
 # Create Vector using vector()
@@ -178,6 +211,8 @@ v <- character(4)
 print(v)
 length(v)
 
+
+
 # Check if vector is character type
 is.character(v)
 
@@ -191,8 +226,8 @@ typeof(v)
 
 # Get length of each element.
 v <- c('a','ABC','bc','A',NA)
+length(v)
 nchar(v)
-
 res <- v == 'a'
 print(res)
 
@@ -206,6 +241,7 @@ length(vec)
 
 # Get Vector Length without NA
 vec <- c('java','r',NA,'python')
+
 length(na.omit(vec))
 
 # Get Vector Length without NA
@@ -217,19 +253,21 @@ length(na.exclude(vec))
 # Create Vector
 ids <- c(10,5,NA,15,10)
 
+#check the na values vector
+is.na(ids)
 # Using is.na()
 x <- ids[!is.na(ids)]
-
+x
 # Using na.rm=TRUE
 x <- max(ids, na.rm=TRUE)
-
+x
 # Using na.omit()
 x <- na.omit(ids)
 
 # Remove NA from string Vector.
 states = c('NY','DC',NA,'CA','NV',NA)
 x <- na.omit(states)
-
+x
 # Using exclude
 x <- na.exclude(states)
 print(x)
@@ -250,9 +288,10 @@ print(vec2)
 
 # Add element to vector at specified position
 vec = c('java','python')
-vec2 <- append(vec,'r',after=1)
+vec2 <- append(vec,'r',after=34)
 print(vec2)
 
+append(1:5, 0:1, after = 0)
 
 # Add Multiple elements to Vector
 vec2 <- c(vec,'r','php')
@@ -277,8 +316,14 @@ is.na(ids)
 x <- ids[!is.na(ids)]
 print(x)
 
+sum(2,7,5)
+
+base::sum(2,7,5)
+
+
+sum(2,7)
 # Using na.rm=TRUE
-x <- sum(ids, na.rm=TRUE)
+x <- base::sum(ids, na.rm=TRUE)
 print(x)
 
 x <- max(ids)
@@ -317,12 +362,6 @@ li <- list(c(x,x1))
 print(li)
 typeof(li)
 
-# Convert multiple vectors into list
-x <- c("1","2")
-x1 <- c(4:6)
-li <- list(x,x1)
-print(li)
-typeof(li)
 
 # Another example
 x<-list("X","Y")
@@ -417,6 +456,7 @@ print(paste(v))
 v <- c('A','B','C','D')
 v2 <- c('X','Y','Z')
 print(paste(v,v2,collapse='-'))
+
 print(paste(v,v2,sep='|'))
 print(paste(v,v2,sep='|',collapse='-'))
 print(paste(v,v2))
@@ -492,3 +532,4 @@ union(v,v)
 # create a list using vectors
 # create a dataframe using vectors
 # convert the vectors into other data structure
+#keep the vector in to the loops
