@@ -58,6 +58,14 @@ print(empList)
 cat("Accessing name components using indices\n")
 print(empList[[2]])
 
+
+vec <- list('java','r',NA,NULL)
+length(vec)
+
+is.na(vec)
+
+is.null(vec)
+
 # Accessing a inner level components by indices
 cat("Accessing Sandeep from name using indices\n")
 print(empList[[2]][2])
@@ -207,8 +215,18 @@ print(list_data[1])
 print('2nd element:')
 print(list_data[2])
 
+
+################
+
 list_data <- list(c("Red","Green","Black"), matrix(c(1,3,5,7,9,11), nrow = 2),
                   list("Python", "PHP", "Java"))
+
+for (i in list_data[[1]]) {
+  if(i == "Green"){
+    print("hello",i)
+  }
+}
+
 print("List:")
 print(list_data)
 print("Add a new element at the end of the list:")
@@ -216,6 +234,9 @@ list_data[4] = "New element"
 print("New list:")
 print(list_data)
 
+
+
+##
 
 x = list(list(0,2), list(3,4), list(5,6))
 print("Original nested list:")
