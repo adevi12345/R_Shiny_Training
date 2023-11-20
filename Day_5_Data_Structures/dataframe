@@ -1,1 +1,81 @@
+#Create a dataframe
+#access the dataframe
+#edit the dataframe
+#update the dataaframe
+#check the values
+#exploratory dataframe
+#null and missing values in the dataframe
+#columnwise data transformation
+#row wised data trassformations
+# subset of the dataframe
+#add the values to the dataframe using loops
+#
+
+#install.packages("safetyData")
+library(safetyData)
+
+#detach("package:safetyData", unload = TRUE)
+
+age<-c(number=2:5)
+age
+name <-c(name = "anjana",age="R",factr="learning",purpose="wow")
+name
+
+name[1]
+first_dataset<-data.frame(age,name)
+
+class(first_dataset)
+
+View(first_dataset)
+
+dim(first_dataset)
+
+str(first_dataset)
+
+names(first_dataset) #column names
+
+summary(first_dataset)
+
+mean(first_dataset$age)  
+
+list(name,age)
+
+
+is.list(name)
+name_list<-as.list(name)
+name_list
+
+is.list(name_list)
+
+example_list<-list(name,age=age,"manish")
+example_list
+
+example_list[[2]]
+
+
+library(safetyData)
+example_dataset_1<-safetyData::adam_adlbh
+
+names_df<-names(example_dataset_1)
+
+
+dim(example_dataset_1)
+
+names_df[5:10]
+
+adlbh_age<-example_dataset_1$AGE # using $method  output will be vector
+values<-adlbh_age[1:4]
+
+values_vector<-c(values,"anjana")
+values_vector
+age_column<-example_dataset_1[["AGE"]] #string of the column  #vector will be the format output 
+
+index_column<-example_dataset_1[1:3]  # 3rd method  #output will be table
+
+
+
+
+
+
+
 
