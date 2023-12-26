@@ -1,0 +1,139 @@
+SrNo	Exercise
+1	Read a SAS data set - dm.sas7bdat into R.
+2	Store this dataset is csv format with the name - dm_sas2csv.csv
+3	Read a SAS data set - adsl.xpt into R.
+4	Store this dataset is excel format with the name - adsl_xpt2xl.xlsx
+
+1	Read dm dataset
+2	Identify structure of R objects (class, str)
+3	Display column names of dm
+4	Convert dm to dataframe
+5	Extract Patient IDs from dm
+6	Check if Patient ID is numeric
+7	Check if Age is numeric
+8	convert 'Birthdate' column to date format
+9	Convert above Birthdate to 'January-1990' type format
+10	Get the year & month part of 'Birthdate'
+
+
+#Day4 - Assignment
+# Questions related to the following topics- Variables, operators, Keywords, Simple Functions
+
+
+########################################################################
+
+#1 
+#Create a numeric , character  and Date variable
+
+########################################################################
+
+#2 
+#How do you find the Data types of variables
+
+
+########################################################################
+#3
+#Create 2 numeric variables and 
+# find the sum, difference, multiplication and division of the 2 variables and 
+# Store the 4 results as separate variables
+
+
+########################################################################
+#4
+#Create some variables with invalid variable names and try to assign values to it
+
+
+
+########################################################################
+#5
+#Create a logical varibales storing the value as TRUE . Check its datatype. How is it different from Character variable?
+
+
+
+
+########################################################################
+#6
+#Concatenate two character variables 
+
+#Day 5 Assignement
+
+#Vectors:
+#Create a numeric vector with 5 elements
+#Create a character vector with 3 elements
+#Retrieve the 3rd element of a vector
+#Modify the value of the last element of the vector
+
+#Dataframe:
+#Create a dataframe with 2 rows and 3 columns
+#Retrieve the 3rd row and 2nd column  of the dataframe
+#Create a new column
+#Delete a column of the dataframe
+
+#Matrix, Array:
+# Create a simple matrix of dimension 3*4
+# Create a simple character array of dimension 3*4*2
+
+#List:
+#Create a list by storing a vector, dataframe in it
+#Retrieve the 1st element of the list
+
+# Data Manipulation assignment
+
+#Load the packages
+#Create a new dataframe with ADAE Variable using 5 rows and 2 columns
+
+
+#Use the %>% operator to add a new record(row) to the above data set.
+
+
+# find the dimension,str,class and column names of the above data set.
+
+# check the duplicate records of the above data set
+
+# filter the records based on your condition
+
+# load any predefined dataset from the safety data package and load the last 13 observations into a new data frame object
+
+# show the first 8 records from the above data set
+
+# Retrieve the duplicate values from the data set( take any data set)
+
+# Add a new  column to the existing dataset
+
+#count the number of rows of the dataset
+
+#Day 8 Assignment
+
+#Column Manipulations
+#Data Aggregations
+###########################################################################
+
+# Use this sample dataset:
+my_data <- data.frame(
+	ID = c(1,2,3,4,5,3),
+	Name=c("Ram","Tom","Soum","Jack","Jill","Soum"),
+	Country=c("India","US","India","US","US","India"),
+  Age = c(15, 30, 22, 35, 90,22),
+  Height = c(155, 180, 165, 172, 198,165),
+  Weight = c(60, 82, 60, 75, 98,60),
+	ReadingDate=dmy("01-01-2023","02-02-2023","03-10-2023","01-12-2023","31-01-2023","03-10-2023"),
+	comments=""
+)
+
+###########################################################################
+#Exercises:
+#Use the above dataset  
+
+#-----------------
+#Create a new dataset by selecting only the following columns 'Name', 'Height'
+#Delete the last column of the above dataset
+#Rename the column name 'ID' to 'S.NO'
+#Relocate 'comments' as the first column 
+#Add a new column named 'NewCol' and fill it with the value 100
+#Add a new column named 'AgeCategory'. The values of this column should be based on Age column. If Age<18, then write as 'Minor' else 'Major' 
+#-----------------
+#Transpose the above dataset
+#-----------------
+# Find the average height of the above dataset
+#Create a summary dataset tha shows the average Height and average Weight -Country wise (Use group_by and summarise)
+
